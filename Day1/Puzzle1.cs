@@ -6,7 +6,7 @@ namespace Day1 {
     public class Puzzle1 : Puzzle {
         protected override string PuzzleDirectory => "Day1";
 
-        public void Solve() {
+        public override void Solve() {
             int ans = 0;
             var intInput = Input.Select(x => Int32.Parse(x)).ToList();
             for (var i = 0; i < Input.Count; i++) {

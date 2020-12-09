@@ -11,5 +11,7 @@ namespace Common
         protected Puzzle() {
             Input = File.ReadAllLines(@$"./{PuzzleDirectory}/input.txt").ToList();
         }
+
+        public abstract void Solve();
     }
 }
