@@ -4,7 +4,7 @@ using Common;
 
 namespace Day2
 {
-    public class Puzzle1 : Puzzle
+    public class Puzzle2 : Puzzle
     {
         protected override string PuzzleDirectory => "Day2";
 
@@ -15,8 +15,10 @@ namespace Day2
             var policies = Input.Select(x => Policy.FromString(x)).ToList();
             foreach (var policy in policies)
             {
-                var letterCount = policy.Password.Count(x => x == policy.Letter);
-                if (letterCount >= policy.FirstCondition && letterCount <= policy.SecondCondition)
+                if (policy.Password[policy.FirstCondition - 1] == policy.Letter
+                 && policy.Password[policy.SecondCondition - 1] != policy.Letter
+                 || policy.Password[policy.FirstCondition - 1] != policy.Letter
+                 && policy.Password[policy.SecondCondition - 1] == policy.Letter)
                 {
                     validPwds++;
                 }

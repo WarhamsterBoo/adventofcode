@@ -8,7 +8,7 @@ namespace adventofcode
         static void Main(string[] args)
         {
             Console.WriteLine("Hello there!");
-            var puzzle = new Puzzle1();
+            var puzzle = new Puzzle2();
             puzzle.Solve();
         }
     }
