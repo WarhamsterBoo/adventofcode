@@ -1,5 +1,5 @@
 ﻿using System;
-using Day2;
+using Day3;
 
 namespace adventofcode
 {
@@ -8,7 +8,7 @@ namespace adventofcode
         static void Main(string[] args)
         {
             Console.WriteLine("Hello there!");
-            var puzzle = new Puzzle2();
+            var puzzle = new Puzzle1();
             puzzle.Solve();
         }
     }
